@@ -1,0 +1,2 @@
+rm -rf yarn.lock to delete
+.scss file name and import also
