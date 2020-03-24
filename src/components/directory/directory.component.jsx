@@ -9,7 +9,7 @@ export default function Directory() {
               title: 'hats',
               imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
               id: 1,
-              linkUrl: 'shop/hats'
+              linkUrl: 'hats'
             },
             {
               title: 'jackets',
@@ -41,8 +41,8 @@ export default function Directory() {
     )
   return (
     <div className="directory-menu">
-        {sections.map(({ title, imageUrl, id, size }) => (
-            <MenuItem key={id} title={title} size={size} imageUrl={imageUrl} />
+        {sections.map(({ id, ...otherSectionProps }) => (
+            <MenuItem key={id} {...otherSectionProps} />
         ))}
     </div>
   )
